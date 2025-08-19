@@ -23,14 +23,15 @@
             <!-- Profile Info -->
             <div class="text-center md:text-left">
                 <h1 class="text-4xl font-bold text-gray-800 mb-1">Oguz Umut SALMAN</h1>
-                <p class="text-blue-600 font-semibold mb-2">Researcher - Centre National Research Scientifique (CNRS)</p>
-                <p class="text-gray-600">Email: umut.salman@lspm.cnrs.fr</p>
-                <p class="text-gray-600">Website: www.oguzumutsalman.org</p>
+                <p class="text-blue-600 font-semibold mb-2">Chargé de Recherche - Centre National Research Scientifique (CNRS)</p>
+                <p class="text-gray-600">Email: oguzumut.salman@cnrs.fr</p>
+                <p class="text-gray-600">Website: https://cnrs-oguzumut.github.io/scientific-profile/</p>
             </div>
             <!-- Profile Photo -->
             <div class="mt-4 md:mt-0">
                 <!-- Added photo.png to the header section -->
                 <img src="./photo.png" 
+                     onerror="this.src='https://placehold.co/128x128/f3f4f6/334155?text=O.S'"
                      alt="Profile Photo" 
                      class="rounded-full ring-4 ring-blue-500 ring-opacity-50 mx-auto md:mx-0 w-32 h-32 object-cover">
             </div>
@@ -38,14 +39,15 @@
 
         <!-- Tab Navigation -->
         <nav class="flex justify-center flex-wrap space-x-2 md:space-x-4 mb-8">
+            <button id="tab-research" class="tab-button bg-blue-500 text-white font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                Recherche
+            </button>
+
             <button id="tab-education" class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
                 Éducation
             </button>
             <button id="tab-experience" class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
                 Expérience
-            </button>
-            <button id="tab-research" class="tab-button bg-blue-500 text-white font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
-                Recherche
             </button>
              <button id="tab-independent" class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
                 Enseignement & Encadrement
@@ -122,12 +124,17 @@
                     <!-- Research Area 1: Plasticité Cristalline -->
                     <div class="p-6 bg-gray-50 rounded-lg shadow-md transition-transform transform hover:scale-105">
                         <h4 class="font-bold text-lg text-gray-800 mb-2">Plasticité Cristalline</h4>
-                        <img src="./high.png" 
-                             alt="./high.png" 
-                             class="w-full h-auto rounded-lg mb-4">
-                        <img src="./cv123020.png" 
-                             alt="./cv123020.png" 
-                             class="w-full h-auto rounded-lg mb-4">
+                        <!-- Flex container to display images side-by-side -->
+                        <div class="flex justify-center items-center gap-4 mb-4">
+                            <img src="./high.png" 
+                                 onerror="this.src='https://placehold.co/384x256/f3f4f6/334155?text=high'"
+                                 alt="./high.png" 
+                                 class="w-1/2 h-auto rounded-lg">
+                            <img src="./cv123020.png" 
+                                 onerror="this.src='https://placehold.co/384x256/f3f4f6/334155?text=cv123020'"
+                                 alt="./cv123020.png" 
+                                 class="w-1/2 h-auto rounded-lg">
+                        </div>
                         <p class="text-gray-600 text-sm">
                             Développement de modèles théoriques et numériques de la plasticité cristalline aux petites échelles, en utilisant des théories de type Landau et la théorie des champs de phase pour décrire l'évolution des dislocations et des déformations.
                         </p>
@@ -136,6 +143,7 @@
                     <div class="p-6 bg-gray-50 rounded-lg shadow-md transition-transform transform hover:scale-105">
                         <h4 class="font-bold text-lg text-gray-800 mb-2">Fracture et Matériaux Architecturés</h4>
                         <img src="turb-0.png" 
+                             onerror="this.src='https://placehold.co/384x256/f3f4f6/334155?text=Image+3'"
                              alt="turb-0.png" 
                              class="w-full h-auto rounded-lg mb-4">
                         <p class="text-gray-600 text-sm">
@@ -145,6 +153,12 @@
                     <!-- Research Area 3: Transitions de Phase Solide-Solide -->
                     <div class="p-6 bg-gray-50 rounded-lg shadow-md transition-transform transform hover:scale-105">
                         <h4 class="font-bold text-lg text-gray-800 mb-2">Transitions de Phase Solide-Solide</h4>
+                        <img src="./kanka.png" 
+                             onerror="this.src='https://placehold.co/384x256/f3f4f6/334155?text=Image+3'"
+                             alt="./kanka.png" 
+                             class="w-full h-auto rounded-lg mb-4">
+                        <p class="text-gray-600 text-sm">
+
                         <p class="text-gray-600 text-sm">
                             Étude de la dynamique de la migration des joints de grains et des transformations de phase à l'échelle atomique en utilisant des simulations stochastiques à dynamique sur-amortie.
                         </p>
@@ -164,7 +178,7 @@
             <section class="mb-8">
                 <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Enseignement & Encadrement</h2>
                  <div class="space-y-6">
-                     <div>
+                    <div>
                         <h3 class="font-semibold text-xl text-gray-700 mb-2">Enseignement</h3>
                         <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
                             <li>Université Sorbonne Paris Nord (2015-2022) : Enseignement de la mécanique avancée en Master.</li>
@@ -340,17 +354,16 @@
                 }
             }
 
-            // Add click event listeners to all tab buttons
+            // Add event listeners to each button
             tabButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     showTab(button.id);
                 });
             });
 
-            // Initially show the 'Recherche' tab as it's the most recently updated
+            // Show the default tab (Research) on page load
             showTab('tab-research');
         });
     </script>
-
 </body>
 </html>
