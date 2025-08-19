@@ -25,13 +25,14 @@
                 <h1 class="text-4xl font-bold text-gray-800 mb-1">Oguz Umut SALMAN</h1>
                 <p class="text-blue-600 font-semibold mb-2">Researcher - Centre National Research Scientifique (CNRS)</p>
                 <p class="text-gray-600">Email: umut.salman@lspm.cnrs.fr</p>
-                <p class="text-gray-600">Website: www.oguzumutsalman.org</p>
+                <p class="text-gray-600">Website: https://github.com/cnrs-oguzumut/scientific-profile</p>
             </div>
             <!-- Profile Photo -->
             <div class="mt-4 md:mt-0">
-                <img src="https://placehold.co/150x150/9CA3AF/ffffff?text=Umut" 
+                <!-- Added photo.png to the header section -->
+                <img src="https://storage.googleapis.com/gcn-file-assets/photo.png-62202354-81c5-4d3c-afc9-6771a0f71850" 
                      alt="Profile Photo" 
-                     class="rounded-full ring-4 ring-blue-500 ring-opacity-50 mx-auto md:mx-0">
+                     class="rounded-full ring-4 ring-blue-500 ring-opacity-50 mx-auto md:mx-0 w-32 h-32 object-cover">
             </div>
         </header>
 
@@ -44,7 +45,10 @@
                 Expérience
             </button>
             <button id="tab-research" class="tab-button bg-blue-500 text-white font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
-                Recherche, Enseignement & Encadrement
+                Recherche
+            </button>
+             <button id="tab-independent" class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                Enseignement & Encadrement
             </button>
             <button id="tab-publications" class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
                 Publications
@@ -113,30 +117,54 @@
         
         <div id="content-research" class="tab-content">
             <section class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Recherche, Enseignement & Encadrement</h2>
-                <div class="space-y-6">
-                    <div>
-                        <h3 class="font-semibold text-xl text-gray-700 mb-2">Recherche</h3>
-                        <div class="space-y-4">
-                            <p class="text-gray-600 mt-2">
-                                L'extrême miniaturisation de la technologie moderne exige une meilleure compréhension de la mécanique non conventionnelle, dominée par les fluctuations, des matériaux à des échelles micro et nanométriques. À ces échelles, la nature de la plasticité médiée par les dislocations change radicalement : les échantillons métalliques submicroniques présentent une limite d'élasticité élevée, cependant corrompue par des fluctuations de déformation intermittentes compromettant les processus de mise en forme et mettant en danger la stabilité structurelle. L'un des objectifs de ma recherche est de mieux comprendre ces phénomènes en développant des modèles mathématiques allant au-delà des outils de la mécanique continue classique comme la théorie de Landau en grande déformation qui peut représenter adéquatement les symétries particulières des réseaux cristallins ou le milieu de Cosserat.
-                            </p>
-                            <p class="text-gray-600 mt-2">
-                                L'une de mes contributions majeures concerne la mise en évidence et la caractérisation de l'intermittence des événements résultant du comportement collectif des défauts (dislocations, joints de grains, macles). Il apporte ainsi une explication physique aux observations expérimentales les plus récentes réalisées sur les grands instruments (ESRF Grenoble). L'innovation de la contribution tient à la conjugaison d'approches discrètes et continues pour aborder la description des phénomènes critiques lors de la déformation de la matière. J'ai pour cela développé une mécanique des milieux continus raffinée, combinée à la méthode des champs de phase.
-                            </p>
-                            <p class="text-gray-600 mt-2">
-                                La portée générale de ces avancées scientifiques se manifeste à travers leurs applications diverses aux matériaux de l'ingénieur, notamment aux métaux et alliages, aux matériaux composites (fibres longues, matrice polymère) ainsi qu'aux matériaux amorphes et cellulaires.
-                            </p>
-                            <p class="text-gray-600 mt-2">
-                                Je souhaite maintenant commenter plusieurs projets plus récents que j’ai entrepris, qui ont été réalisés après mon accession à mon poste au CNRS et auxquels j’ai eu le plaisir de collaborer. Ces projets couvrent un large éventail de sujets, notamment la fracture, la plasticité et même la mécanique cellulaire.
-                            </p>
-                            <p class="text-gray-600 mt-2">
-                                Le premier projet récent que j’ai réalisé a démontré que l’élasticité non linéaire du continuum peut être efficace pour modéliser les écoulements plastiques dans les cristaux si l’énergie élastique est équipée d’un nombre infini de puits équivalents, dont la configuration est dictée par le groupe de symétrie cristalline global. À titre de preuve de principe, j’ai étudié la nucléation de dislocations dans un cristal 2D soumis à une déformation homogène et j’ai montré que l’invariance tensorielle globale de l’énergie élastique favorise le développement de la complexité dans la configuration des défauts qui se forment collectivement. Dans l’ensemble, mon modèle a montré que la plasticité cristalline découle naturellement de l’élasticité non linéaire si la symétrie tensorielle du réseau cristallin est correctement prise en compte. J’ai également fourni des preuves convaincantes que les textures plastiques peuvent provenir du glissement inélastique à l’échelle microscopique. De plus, en menant des expériences numériques uniques, j’ai montré que le processus de formation des textures est intrinsèquement instable et implique des mouvements quasi-turbulents avec des corrélations spatiales distribuées selon une loi de puissance.
-                            </p>
-                        </div>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Domaines de Recherche</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Research Area 1: Plasticité Cristalline -->
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Plasticité Cristalline</h4>
+                        <img src="https://storage.googleapis.com/gcn-file-assets/high.jpg-2b83f8e7-3b04-4925-b07a-3c142d44c497" 
+                             alt="high.jpg" 
+                             class="w-full h-auto rounded-lg mb-4">
+                        <img src="https://storage.googleapis.com/gcn-file-assets/cv123020.jpg-9829d7cc-ab1d-4703-a420-6944808802b9" 
+                             alt="cv123020.jpg" 
+                             class="w-full h-auto rounded-lg mb-4">
+                        <p class="text-gray-600 text-sm">
+                            Développement de modèles théoriques et numériques de la plasticité cristalline aux petites échelles, en utilisant des théories de type Landau et la théorie des champs de phase pour décrire l'évolution des dislocations et des déformations.
+                        </p>
                     </div>
-                    
-                    <div>
+                    <!-- Research Area 2: Fracture et Matériaux Architecturés -->
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Fracture et Matériaux Architecturés</h4>
+                        <img src="https://storage.googleapis.com/gcn-file-assets/turb-0.png-84a7bc59-e083-480c-82a5-a6c14cd3e39f" 
+                             alt="turb-0.png" 
+                             class="w-full h-auto rounded-lg mb-4">
+                        <p class="text-gray-600 text-sm">
+                            Modélisation de la propagation de la fracture dans les matériaux et de son application aux structures architecturées, en particulier les matériaux poreux et les films minces.
+                        </p>
+                    </div>
+                    <!-- Research Area 3: Transitions de Phase Solide-Solide -->
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Transitions de Phase Solide-Solide</h4>
+                        <p class="text-gray-600 text-sm">
+                            Étude de la dynamique de la migration des joints de grains et des transformations de phase à l'échelle atomique en utilisant des simulations stochastiques à dynamique sur-amortie.
+                        </p>
+                    </div>
+                    <!-- Research Area 4: Nano-Matériaux -->
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Nano-Matériaux</h4>
+                        <p class="text-gray-600 text-sm">
+                            Exploration des propriétés mécaniques et de la plasticité des nano-matériaux, en particulier dans le cadre de collaborations internationales sur les nano-cristaux et les verres métalliques.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div id="content-independent" class="tab-content hidden">
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Enseignement & Encadrement</h2>
+                 <div class="space-y-6">
+                     <div>
                         <h3 class="font-semibold text-xl text-gray-700 mb-2">Enseignement</h3>
                         <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
                             <li>Université Sorbonne Paris Nord (2015-2022) : Enseignement de la mécanique avancée en Master.</li>
@@ -144,7 +172,6 @@
                             <li>École d’été franco-roumaine de mathématiques appliquées (Sinaia, Roumanie, 2018) : Professeur invité.</li>
                         </ul>
                     </div>
-
                     <div>
                         <h3 class="font-semibold text-xl text-gray-700 mb-2">Contrats de Recherche</h3>
                         <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
