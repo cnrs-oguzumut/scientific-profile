@@ -1,12 +1,10 @@
-// Global Visitor Counter
+// Global Visitor Counter using hits.sh
 (function() {
     'use strict';
 
-    // Configuration
-    const NAMESPACE = 'cnrs-oguzumut-scientific-profile';
-    const KEY = 'page_visits';
-    const API_URL = `https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`;
-    const FALLBACK_API_URL = 'https://api.counterapi.dev/v1/cnrs-oguzumut-profile/visits/up';
+    // Configuration - Using hits.sh (simple, reliable, free service)
+    const COUNTER_URL = 'https://hits.sh/cnrs-oguzumut.github.io/scientific-profile.svg';
+    const COUNT_API_URL = 'https://hits.sh/cnrs-oguzumut.github.io/scientific-profile/count.json';
 
     const VISITED_KEY = 'hasVisitedToday';
     const LAST_VISIT_KEY = 'lastVisitDate';
@@ -16,63 +14,91 @@
         const lastVisit = localStorage.getItem(LAST_VISIT_KEY);
         const hasVisitedToday = localStorage.getItem(VISITED_KEY) === 'true' && lastVisit === today;
 
-        if (hasVisitedToday) {
-            // Just fetch the count without incrementing
-            fetchCount();
-        } else {
-            // Increment the global counter
-            incrementAndFetchCount(today);
-        }
+        // Always fetch and display the count
+        // If not visited today, the fetch itself will increment the counter
+        fetchAndIncrementCount(today, hasVisitedToday);
     }
 
-    function incrementAndFetchCount(today) {
-        // Try primary API first
-        fetch(API_URL)
+    function fetchAndIncrementCount(today, hasVisited) {
+        // Fetch the counter (this will auto-increment on first visit)
+        fetch(COUNT_API_URL, {
+            method: 'GET',
+            cache: 'no-store'
+        })
             .then(response => {
-                if (!response.ok) throw new Error('Primary API failed');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
                 return response.json();
             })
             .then(data => {
-                updateVisitorDisplay(data.value);
-                markVisitedToday(today);
+                const count = data.total || data.count || 0;
+                console.log('Global visitor count:', count);
+                updateVisitorDisplay(count);
+
+                if (!hasVisited) {
+                    markVisitedToday(today);
+                }
             })
             .catch(error => {
-                console.log('Primary API failed, trying fallback...');
-                // Try fallback API
-                fetch(FALLBACK_API_URL, { method: 'POST' })
-                    .then(response => {
-                        if (!response.ok) throw new Error('Fallback API failed');
-                        return response.json();
-                    })
-                    .then(data => {
-                        const count = data.count || data.value || 0;
-                        updateVisitorDisplay(count);
-                        markVisitedToday(today);
-                    })
-                    .catch(fallbackError => {
-                        console.error('All APIs failed:', fallbackError);
-                        // Use localStorage as last resort
-                        useLocalStorageFallback();
-                    });
+                console.error('Failed to fetch counter:', error);
+                // Try alternative method: load the SVG badge
+                tryImageCounter(today, hasVisited);
             });
     }
 
-    function fetchCount() {
-        // Just get the count without incrementing
-        const GET_URL = `https://api.countapi.xyz/get/${NAMESPACE}/${KEY}`;
+    function tryImageCounter(today, hasVisited) {
+        // Create a hidden image that loads the counter
+        // This will increment the count automatically
+        const img = new Image();
+        img.style.display = 'none';
 
-        fetch(GET_URL)
-            .then(response => {
-                if (!response.ok) throw new Error('Failed to fetch count');
-                return response.json();
-            })
+        img.onload = function() {
+            // Successfully loaded - mark as visited
+            if (!hasVisited) {
+                markVisitedToday(today);
+            }
+            // Try to fetch count again after a brief delay
+            setTimeout(() => {
+                fetchCountOnly();
+            }, 1000);
+        };
+
+        img.onerror = function() {
+            console.error('Image counter failed, using localStorage fallback');
+            useLocalStorageFallback();
+        };
+
+        // Add cache buster to ensure fresh count
+        img.src = COUNTER_URL + '?nocache=' + Date.now();
+        document.body.appendChild(img);
+
+        // Clean up after loading
+        setTimeout(() => {
+            if (img.parentNode) {
+                img.parentNode.removeChild(img);
+            }
+        }, 5000);
+    }
+
+    function fetchCountOnly() {
+        fetch(COUNT_API_URL, {
+            method: 'GET',
+            cache: 'no-store'
+        })
+            .then(response => response.json())
             .then(data => {
-                updateVisitorDisplay(data.value);
+                const count = data.total || data.count || 0;
+                updateVisitorDisplay(count);
             })
             .catch(error => {
                 console.error('Failed to fetch count:', error);
-                // Show cached count or fallback
-                useLocalStorageFallback();
+                const cached = localStorage.getItem('cachedVisitorCount');
+                if (cached) {
+                    updateVisitorDisplay(parseInt(cached));
+                } else {
+                    useLocalStorageFallback();
+                }
             });
     }
 
