@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('tab-content-container');
 
     // Render all sections
-    renderEducationSection();
-    renderExperienceSection();
+    renderParcoursSection();
     renderResearchSection();
     renderIndependentSection();
     renderPublicationsSection();
@@ -18,35 +17,30 @@ document.addEventListener('DOMContentLoaded', () => {
     renderInteractiveSection();
 });
 
-function renderEducationSection() {
+function renderParcoursSection() {
     const content = `
-        <div id="content-education" role="tabpanel" aria-labelledby="tab-education" class="tab-content hidden">
+        <div id="content-parcours" role="tabpanel" aria-labelledby="tab-parcours" class="tab-content hidden">
             <section class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Éducation</h2>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Parcours</h2>
+
+                <!-- Education -->
+                <h3 class="text-xl font-semibold text-gray-700 mt-6 mb-3">Éducation</h3>
                 <div class="space-y-4">
                     ${profileData.education.map(edu => `
                         <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
-                            <h3 class="font-semibold text-lg text-gray-700">${edu.degree}</h3>
+                            <h4 class="font-semibold text-lg text-gray-700">${edu.degree}</h4>
                             <p class="text-sm text-gray-500">${edu.period}</p>
                             <p class="text-gray-600 mt-2">${edu.institution}</p>
                         </div>
                     `).join('')}
                 </div>
-            </section>
-        </div>
-    `;
-    document.getElementById('tab-content-container').insertAdjacentHTML('beforeend', content);
-}
 
-function renderExperienceSection() {
-    const content = `
-        <div id="content-experience" role="tabpanel" aria-labelledby="tab-experience" class="tab-content hidden">
-            <section class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Expérience Professionnelle</h2>
+                <!-- Experience -->
+                <h3 class="text-xl font-semibold text-gray-700 mt-8 mb-3">Expérience Professionnelle</h3>
                 <div class="space-y-4">
                     ${profileData.experience.map(exp => `
                         <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
-                            <h3 class="font-semibold text-lg text-gray-700">${exp.position}</h3>
+                            <h4 class="font-semibold text-lg text-gray-700">${exp.position}</h4>
                             <p class="text-sm text-gray-500">${exp.period}</p>
                             <p class="text-gray-600 mt-2">${exp.description}</p>
                         </div>
