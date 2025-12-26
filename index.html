@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Oguz Umut SALMAN - Personal Page</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            safelist: [
+                'bg-cyan-500',
+                'bg-cyan-600',
+                'hover:bg-cyan-600',
+                'bg-purple-500',
+                'bg-purple-600',
+                'hover:bg-purple-600',
+                'bg-blue-500',
+                'bg-blue-600',
+                'hover:bg-blue-600',
+                'bg-gray-200',
+                'bg-gray-300',
+                'hover:bg-gray-300',
+                'text-white',
+                'text-gray-800'
+            ]
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-4xl">
+
+        <!-- Header Section -->
+        <header class="flex flex-col md:flex-row items-center md:items-start justify-between mb-8">
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl font-bold text-gray-800 mb-1">Oguz Umut SALMAN</h1>
+                <p class="text-blue-600 font-semibold mb-2">Chargé de Recherche - Centre National Research Scientifique (CNRS)</p>
+                <p class="text-gray-600">
+                    Email: <a href="mailto:oguzumut.salman@cnrs.fr" class="hover:underline text-blue-600">oguzumut.salman@cnrs.fr</a>
+                </p>
+                <p class="text-gray-600">
+                    Website: <a href="https://cnrs-oguzumut.github.io/scientific-profile/" target="_blank" rel="noopener noreferrer" class="hover:underline text-blue-600">https://cnrs-oguzumut.github.io/scientific-profile/</a>
+                </p>
+            </div>
+            <div class="mt-4 md:mt-0">
+                <img src="./assets/images/photo.png"
+                     onerror="this.src='https://placehold.co/128x128/f3f4f6/334155?text=O.S'"
+                     alt="Profile photo of Oguz Umut Salman"
+                     class="rounded-full ring-4 ring-blue-500 ring-opacity-50 mx-auto md:mx-0 w-32 h-32 object-cover">
+            </div>
+        </header>
+
+        <!-- Navigation Tabs - Sticky -->
+        <div class="sticky-nav-wrapper">
+            <nav role="tablist" class="flex justify-center flex-wrap space-x-2 md:space-x-4">
+                <button id="tab-research" role="tab" aria-selected="true" aria-controls="content-research"
+                        class="tab-button bg-blue-500 text-white font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                    Recherche
+                </button>
+                <button id="tab-education" role="tab" aria-selected="false" aria-controls="content-education"
+                        class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                    Éducation
+                </button>
+                <button id="tab-experience" role="tab" aria-selected="false" aria-controls="content-experience"
+                        class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                    Expérience
+                </button>
+                <button id="tab-independent" role="tab" aria-selected="false" aria-controls="content-independent"
+                        class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                    Enseignement & Encadrement
+                </button>
+                <button id="tab-publications" role="tab" aria-selected="false" aria-controls="content-publications"
+                        class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                    Publications
+                </button>
+                <button id="tab-conferences" role="tab" aria-selected="false" aria-controls="content-conferences"
+                        class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                    Conférences
+                </button>
+                <button id="tab-software" role="tab" aria-selected="false" aria-controls="content-software"
+                        class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                    Software
+                </button>
+                <button id="tab-documents" role="tab" aria-selected="false" aria-controls="content-documents"
+                        class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                    Documents
+                </button>
+                <button id="tab-interactive" role="tab" aria-selected="false" aria-controls="content-interactive"
+                        class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                    Visualisations
+                </button>
+            </nav>
+        </div>
+
+        <!-- Content will be loaded here -->
+        <div id="tab-content-container"></div>
+
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <!-- Load content data and scripts -->
+    <script src="./js/content.js"></script>
+    <script src="./js/render.js"></script>
+    <script src="./js/tabs.js"></script>
+    <script src="./js/enhancements.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oguz Umut SALMAN - Personal Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-4xl">
+        
+        <header class="flex flex-col md:flex-row items-center md:items-start justify-between mb-8">
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl font-bold text-gray-800 mb-1">Oguz Umut SALMAN</h1>
+                <p class="text-blue-600 font-semibold mb-2">Chargé de Recherche - Centre National Research Scientifique (CNRS)</p>
+                <p class="text-gray-600">
+                    Email: <a href="mailto:oguzumut.salman@cnrs.fr" class="hover:underline text-blue-600">oguzumut.salman@cnrs.fr</a>
+                </p>
+                <p class="text-gray-600">
+                    Website: <a href="https://cnrs-oguzumut.github.io/scientific-profile/" target="_blank" rel="noopener noreferrer" class="hover:underline text-blue-600">https://cnrs-oguzumut.github.io/scientific-profile/</a>
+                </p>
+            </div>
+            <div class="mt-4 md:mt-0">
+                <img src="./photo.png" 
+                     onerror="this.src='https://placehold.co/128x128/f3f4f6/334155?text=O.S'"
+                     alt="Profile photo of Oguz Umut Salman" 
+                     class="rounded-full ring-4 ring-blue-500 ring-opacity-50 mx-auto md:mx-0 w-32 h-32 object-cover">
+            </div>
+        </header>
+
+        <nav role="tablist" class="flex justify-center flex-wrap space-x-2 md:space-x-4 mb-8">
+            <button id="tab-research" role="tab" aria-selected="true" aria-controls="content-research" class="tab-button bg-blue-500 text-white font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                Recherche
+            </button>
+            <button id="tab-education" role="tab" aria-selected="false" aria-controls="content-education" class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                Éducation
+            </button>
+            <button id="tab-experience" role="tab" aria-selected="false" aria-controls="content-experience" class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                Expérience
+            </button>
+             <button id="tab-independent" role="tab" aria-selected="false" aria-controls="content-independent" class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                Enseignement & Encadrement
+            </button>
+            <button id="tab-publications" role="tab" aria-selected="false" aria-controls="content-publications" class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                Publications
+            </button>
+            <button id="tab-conferences" role="tab" aria-selected="false" aria-controls="content-conferences" class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                Conférences
+            </button>
+            <button id="tab-software" role="tab" aria-selected="false" aria-controls="content-software" class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                Software
+            </button>
+            <button id="tab-documents" role="tab" aria-selected="false" aria-controls="content-documents" class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                Documents
+            </button>
+            <button id="tab-interactive" role="tab" aria-selected="false" aria-controls="content-interactive" class="tab-button bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">
+                Visualisations
+            </button>
+        </nav>
+
+        <div id="content-education" role="tabpanel" aria-labelledby="tab-education" class="tab-content hidden">
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Éducation</h2>
+                <div class="space-y-4">
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <h3 class="font-semibold text-lg text-gray-700">Ph.D. in Physics</h3>
+                        <p class="text-sm text-gray-500">09.2005 – 06.2009</p>
+                        <p class="text-gray-600 mt-2">Université Pierre et Marie Curie, Paris, FRANCE (Mention Très Honorable)</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <h3 class="font-semibold text-lg text-gray-700">M.Sc. in Materials Science and Nano-Objects</h3>
+                        <p class="text-sm text-gray-500">09.2004 – 09.2005</p>
+                        <p class="text-gray-600 mt-2">Ecole Polytechnique, Palaiseau, FRANCE (Mention Très Honorable)</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <h3 class="font-semibold text-lg text-gray-700">B.S. in Physics</h3>
+                        <p class="text-sm text-gray-500">09.2000 – 06.2004</p>
+                        <p class="text-gray-600 mt-2">Istanbul Technical University, Physics Department, Istanbul, TURKEY (Honour List)</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="content-experience" role="tabpanel" aria-labelledby="tab-experience" class="tab-content hidden">
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Expérience Professionnelle</h2>
+                <div class="space-y-4">
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <h3 class="font-semibold text-lg text-gray-700">CNRS, Chargé de recherche</h3>
+                        <p class="text-sm text-gray-500">01.2015 - PRÉSENT</p>
+                        <p class="text-gray-600 mt-2">Chercheur - Centre National de la Recherche Scientifique (CNRS) en Mécanique, FRANCE.</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <h3 class="font-semibold text-lg text-gray-700">CNR-IENI, Chercheur scientifique</h3>
+                        <p class="text-sm text-gray-500">09.2013 - 09.2015</p>
+                        <p class="text-gray-600 mt-2">Chercheur Post-Doctoral - CNR-IENI Milano, ITALIE. Subvention avancée du Conseil européen de la recherche : Effets de taille sur la rupture et la plasticité.</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <h3 class="font-semibold text-lg text-gray-700">Harvard University, Post-doc</h3>
+                        <p class="text-sm text-gray-500">10.2012 - 09.2013</p>
+                        <p class="text-gray-600 mt-2">Chercheur Post-Doctoral - The Aisenberg Biomineralization and Biomimetic Laboratory, Harvard University, USA.</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <h3 class="font-semibold text-lg text-gray-700">Bosphorus University, Post-doc</h3>
+                        <p class="text-sm text-gray-500">10.2011 - 10.2012</p>
+                        <p class="text-gray-600 mt-2">Chercheur Post-Doctoral - Département de physique sous la supervision de M. Mungan.</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <h3 class="font-semibold text-lg text-gray-700">École Polytechnique, Post-doc</h3>
+                        <p class="text-sm text-gray-500">06.2009 - 10.2011</p>
+                        <p class="text-gray-600 mt-2">Chercheur Post-Doctoral - Laboratoire de mécanique des solides (LMS), École Polytechnique, FRANCE.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div id="content-research" role="tabpanel" aria-labelledby="tab-research" class="tab-content">
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Domaines de Recherche</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Plasticité Cristalline</h4>
+                        <div class="flex justify-center items-center gap-4 mb-4">
+                            <img src="./high.png" 
+                                 onerror="this.src='https://placehold.co/384x256/f3f4f6/334155?text=high'"
+                                 alt="Simulation of crystal plasticity" 
+                                 class="w-1/2 h-auto rounded-lg">
+                            <img src="./cv123020.png" 
+                                 onerror="this.src='https://placehold.co/384x256/f3f4f6/334155?text=cv123020'"
+                                 alt="Graph of crystal deformation" 
+                                 class="w-1/2 h-auto rounded-lg">
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            Développement de modèles théoriques et numériques de la plasticité cristalline aux petites échelles, en utilisant des théories de type Landau et la théorie des champs de phase pour décrire l'évolution des dislocations et des déformations.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Fracture et Matériaux Architecturés</h4>
+                        <img src="turb-0.png" 
+                             onerror="this.src='https://placehold.co/384x256/f3f4f6/334155?text=Image+3'"
+                             alt="Fracture propagation model" 
+                             class="w-full h-auto rounded-lg mb-4">
+                        <p class="text-gray-600 text-sm">
+                            Modélisation de la propagation de la fracture dans les matériaux et de son application aux structures architecturées, en particulier les matériaux poreux et les films minces.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Transitions de Phase Solide-Solide</h4>
+                        <img src="./kanka.png" 
+                             onerror="this.src='https://placehold.co/384x256/f3f4f6/334155?text=Image+3'"
+                             class="w-full h-auto rounded-lg mb-4">
+                        <p class="text-gray-600 text-sm">
+                            Étude de la dynamique de la migration des joints de grains et des transformations de phase à l'échelle atomique en utilisant des simulations stochastiques à dynamique sur-amortie.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Nano-Matériaux</h4>
+                            <img src="./pillier.png" 
+                             onerror="this.src='https://placehold.co/384x256/f3f4f6/334155?text=Image+3'"
+                             class="w-full h-auto rounded-lg mb-4">
+
+                        <p class="text-gray-600 text-sm">
+                            Exploration des propriétés mécaniques et de la plasticité des nano-matériaux, en particulier dans le cadre de collaborations internationales sur les nano-cristaux et les verres métalliques.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div id="content-independent" role="tabpanel" aria-labelledby="tab-independent" class="tab-content hidden">
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Enseignement & Encadrement</h2>
+                 <div class="space-y-6">
+                    <div>
+                        <h3 class="font-semibold text-xl text-gray-700 mb-2">Enseignement</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
+                            <li>Université Sorbonne Paris Nord (2015-2022) : Enseignement de la mécanique avancée en Master.</li>
+                            <li>Université de Lund (Suède) (2022-2025) : Professeur invité, mécanique avancée en Master.</li>
+                            <li>École d’été franco-roumaine de mathématiques appliquées (Sinaia, Roumanie, 2018) : Professeur invité.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-xl text-gray-700 mb-2">Contrats de Recherche</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
+                            <li><b>ANR-FWF : Super-Glasses</b> – Responsable de projet. Nanoengineering metallic glasses through chemical and structural heterogeneities. Financement : 2 thèses + 2 post-docs financés pour le LSPM, collaboration avec M. Ghidelli et P. Djemia (LSPM), +50 k€ pour LSPM et 300 k€ pour le partenaire autrichien C. Gammer (ESI, Leoben).</li>
+                            <li><b>MITI – 80PRIME : BE-ST</b> – Responsable de projet. Physical nature of BEnding-to-STretching phase transition in semi-flexible fibers networks: from materials to cytoskeleton. Financement : 25 k€ + 1 thèse financée pour LSPM, collaboration avec V. Lecomte (LIPhy), (03/2023 – 09/2026).</li>
+                            <li><b>ANR : MESOCRYSP</b> – Partenaire de projet. Discrete Mesoscale Plasticity. Financement : 450 k€ pour LSPM, responsable de l’équipe LSPM, collaboration avec PMMH–Centre des Matériaux, (11/2021 – 09/2025).</li>
+                            <li><b>ANR-JCJC : ALIS</b> – Responsable de projet. Modeling of reconstructive phase transformations through Atomistically informed Landau theory with Infinite Symmetry. Financement : 160 k€ pour LSPM, (03/2020 – 01/2024).</li>
+                            <li><b>ANR-FWF : NANOFILM</b> – Responsable d’un axe de projet. Nanoarchitected Films for Unbreakable Flexible Electronics. Financement : Budget total 572 k€, dont 142 k€ pour LSPM ; collaboration avec PPRIME-CNRS et ESI Leoben (Autriche). Responsable du modèle de phase-field pour la rupture des films minces et encadrement d’un post-doc, (03/2021 – 03/2024).</li>
+                            <li><b>ANR-PRCI : SUMMIT</b> – Partenaire de projet. Collaboration avec l’Université Jiaotong de Xi’an, budget total 265,5 k€, dont 29,5 k€ pour LSPM, (01/2018 – 12/2021).</li>
+                            <li><b>Labex – Projet émergent</b> – Responsable de projet. Unified multi-scale framework for plasticity of metals, amorphous and cellular materials. Collaboration avec M. Durant (Université Paris 7), (10/2018 – 10/2019).</li>
+                            <li><b>ANR : I2T2M</b> – Partenaire de projet. Budget total 3 k€, (01/2019 – 12/2022).</li>
+                            <li><b>PICS – CNRS (Poland)</b> – Responsable de projet. International Scientific Collaboration Project, financement 15 k€, (2017 – 2020).</li>
+                            <li><b>Visiting Professor</b> – Université Paris 13. Financement 2,5 k€, (2017).</li>
+                            <li><b>Concours “Coup de Pouce”</b> – F2M (Fédération Française de Mécanique) – Responsable de projet. Financement 50 k€, (2015 – 2016).</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold text-xl text-gray-700 mb-2">Supervisions</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-lg text-gray-700">En cours</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
+                                    <li><b>Ph.D:</b> P. Soyfer, "On the physical nature of BEnding-to-STretching phase transition in semi-flexible fibers networks with applications to mechanics of cytoskeleton," financé par CNRS-MITI défi 80 prime, co-directeur (36 mois), 2024-2027</li>
+                                    <li><b>Ph.D:</b> G. Tejedor, "Modélisation numérique de la plasticité mésoscopique des cristaux par l’élasticité non linéaire invariante GL(3, Z)," financé par ANR-MESOCRYSP, co-directeur (36 mois), 2023-2026</li>
+                                    <li><b>Ph.D:</b> E. Lundheim, "Effect of disorder on dislocation avalanches using the GL(2, Z) invariant plasticity model," financé par ANR-MESOCRYSP, co-directeur (36 mois), 2023-2026</li>
+                                </ul>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-lg text-gray-700">Achevées</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
+                                    <li><b>Ph.D:</b> J. Smiri, "Eulerian finite element modelling of ductile fracture in micro-scale crystals," financé par une bourse de l'Université Sorbonne Paris Nord, co-directeur (36 mois), 2021-2024 (soutenue)</li>
+                                    <li><b>Ph.D:</b> M. Aissaoui, "Acoustic emission study of intermittent plasticity: the role of disorder, crystal orientation and symmetry," financé par une bourse de l'Université Sorbonne Paris Nord, co-directeur (36 mois), 2021-2024 (soutenue)</li>
+                                    <li><b>Post-Doc:</b> K. Ghosh, "Modelling of coupling of phase transition with crystal plasticity in Zirconium and Titanium through Landau theory," financé par ANR-JCJC, (18 mois), 2022-2024</li>
+                                    <li><b>Post-Doc:</b> M. Terzi, "A low dimensional representation of 6D metric space via machine learning for the development of a new 3D Landau theory of crystal plasticity," financé par ANR-MESOCRYSP et ANR-FWF: NANOFILM, (24 mois), 2021-2023</li>
+                                    <li><b>Post-Doc:</b> M. Degeiter, "Modelling of Fracture in thin films through phase-field approach," financé par Labex, 2019-2022</li>
+                                    <li><b>Post-Doc:</b> N. Gorbushin, "Landau-type modeling of marginal stability in plasticity," financé par ANR-PRCI-SUMMIT, 2019-2021</li>
+                                    <li><b>Post-Doc:</b> A. Ask, "Modélisation de Recristallisation Concours coup de pouce, Fédération francilienne de mécanique, FRANCE," financé par Concours coup de pouce de F2M, (2015-2016), (actuellement ingénieur de recherche à l'ONERA)</li>
+                                    <li><b>Ph.D:</b> R. Baggio, "Multi-Scale Modelling of Plasticity," financé par une bourse de l'Université Sorbonne Paris Nord, co-directeur, soutenue en décembre 2019, (post-doc à l'INRIA-Bordeaux et Université de Corse)</li>
+                                    <li><b>Ph.D:</b> M. Spagnuolo, "Modélisation continue des structures pantographiques," bourse européenne Inspire, UE, co-directeur, soutenue en septembre 2019</li>
+                                    <li><b>Ph.D:</b> C. Baruffi, "Modélisation des mécanismes de vieillissement et d’endommagement dans les alliages métalliques," bourse ONERA, FRANCE, soutenue en décembre 2018 (actuellement embauchée à ASML Netherlands, a reçu le prix Jacques Dalla Torre 2019 pour son travail de thèse)</li>
+                                    <li><b>Ph.D:</b> P. Zhang, supervision de la dernière année de sa thèse à Paris, collaboration Chine/France, soutenue en 2018, (actuellement professeur assistant à l'Université Jiaotong de Xi’an)</li>
+                                </ul>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-lg text-gray-700">Stages</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
+                                    <li><b>Stage M2:</b> Julien Baillard, 5 mois, LSPM/EPSCI (2024)</li>
+                                    <li><b>Stage M2:</b> F. Mansouri, PNUS/LSPM (2016)</li>
+                                    <li><b>Stage M2:</b> O. Benamor, 4 mois PNUS/LSPM (2020)</li>
+                                    <li><b>Stage collège:</b> Mehmet Dogramaci, une semaine, LSPM (2024)</li>
+                                    <li><b>Stage collège:</b> O. Benamor, PNUS/LSPM (2020)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="content-publications" role="tabpanel" aria-labelledby="tab-publications" class="tab-content hidden">
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Publications</h2>
+                <p class="text-gray-600 mb-4 italic">
+                    Dans toutes mes publications, j'ai contribué à la conception et à la mise en œuvre de la recherche, à l'analyse des résultats, au développement du code numérique et à la rédaction du manuscrit. La plupart des résultats ont été obtenus en utilisant mes bibliothèques de code existantes.
+                </p>
+                
+                <h3 class="text-xl font-semibold text-gray-700 mt-6 mb-3">Pre-prints</h3>
+                <ul class="list-disc list-inside space-y-2 mb-6">
+                    <li class="text-gray-600">J Smiri, OU Salman, IR Ionescu, "Orientation attractors in velocity gradient driven processes for large plastic deformations of crystals," arXiv preprint arXiv:2504.13714, (2025)</li>
+                    <li class="text-gray-600">J Smiri, J Paux, OU Salman, IR Ionescu, "Large plastic deformation of voids in crystals," arXiv preprint arXiv:2504.03565, (2025)</li>
+                    <li class="text-gray-600">J Smiri, OU Salman, IR Ionescu, "Dislocation-density based crystal plasticity: stability and attractors in slip rate driven processes," arXiv preprint arXiv:2504.02413, (2025)</li>
+                </ul>
+                
+                <h3 class="text-xl font-semibold text-gray-700 mt-6 mb-3">Published</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li class="text-gray-600">O.U. Salman, A. Finel, L. Truskinovsky, "Inertia induced power-law scaling," Mathematics and Mechanics of Solids, 1-39 (2025)</li>
+                    <li class="text-gray-600">M.M. Terzi, O.U. Salman, D. Faurie, A.A. Baldelli, "Navigating local minima and bifurcations in brittle thin film systems with irreversible damage," Computer Methods in Applied Mechanics and Engineering 445, 118201, (2025)</li>
+                    <li class="text-gray-600">K. Ghosh, O.U. Salman, S. Queyreau, L. Truskinovsky, "Slip-dominated structural transitions," Physical Review Materials 9 (7), 073604, Editors' Choice, (2025)</li>
+                    <li class="text-gray-600">M. Lamari, P. Kerfriden, O.U. Salman, V. Yastrebov, K. Ammar, S. Forest, "A time-discontinuous elasto-plasticity formalism to simulate instantaneous plastic flow bursts," International Journal of Solids and Structures 309, 11317, (2024)</li>
+                    <li class="text-gray-600">J. Smiri, O.U. Salman, M Ghidelli, and I.R. Ionescu, "Accounting for localized deformation: a simple computation of true stress in micropillar compression experiments," Experimental Mechanics 64 (9), 1435-1442, arXiv:2310.06476, (2024)</li>
+                    <li class="text-gray-600">R. Baggio, O.U. Salman, L. Truskinovsky, "Nucleation of dislocations by pattern formation," European Journal of Mechanics-A/Solids 99, 104897, (2023)</li>
+                    <li class="text-gray-600">R. Baggio, O.U. Salman, L. Truskinovsky, "Inelastic rotations and pseudoturbulent plastic avalanches in crystals," Phys. Rev. E 107, 025004 – Published 24 February (2023)</li>
+                    <li class="text-gray-600">C. Baruffi, A. Finel, Y. Le Bouar, B. Bacroix, O.U. Salman, "Atomistic simulations of temperature-driven microstructure formation in pure Titanium," Computational Materials Science 203, 111057, Editor's choice, (2022)</li>
+                    <li class="text-gray-600">O.U. Salman, I.R. Ioanescu, "Tempering the mechanical response of FCC micro-pillars: an Eulerian plasticity approach," Mechanics Research Communications, Volume 114, June, (2021)</li>
+                    <li class="text-gray-600">O.U. Salman, L. Truskinovsky, "Delocalizing fracture," Journal of the Mechanics and Physics of Solids 154, 104517, (2021)</li>
+                    <li class="text-gray-600">OU Salman, R Baggio, B Bacroix, G Zanzotto, N Gorbushin, "Discontinuous yielding of pristine micro-crystals," Comptes Rendus. Physique 22 (S3), 1-48, (2021)</li>
+                    <li class="text-gray-600">P. Zhang, O.U. Salman, J. Weiss, L. Truskinovsky, "Fluctuations in crystalline plasticity," Comptes Rendus. Physique 22 (S3), 1-3707, (2021)</li>
+                    <li class="text-gray-600">P. Zhang, O.U. Salman, J. Weiss, L. Truskinovsky, "Variety of scaling behaviors in nanocrystalline plasticity," Phys. Rev. E, 102, 023006, arXiv:2004.08579, hal-02644607, (2020)</li>
+                    <li class="text-gray-600">Edited by I.R. Ionescu, S. Queyreau, C. R. Picu, O.U. Salman, "Mechanics and Physics of Solids at Micro- and Nano-Scales," ISBN: 978-1-786-30531-2 February (2020)</li>
+                    <li class="text-gray-600">O.U. Salman, R. Baggio, "Homogeneous Dislocation Nucleation in Landau Theory of Crystal Plasticity," appeared in the book Mechanics and Physics of Solids at Micro- and Nano-Scales, (2019)</li>
+                    <li class="text-gray-600">R. Baggio, E. Arbib, P. Biscari, S. Conti, L. Truskinovsky, G. Zanzotto, and O.U. Salman, "Landau-Type Theory of Planar Crystal Plasticity," Phys. Rev. Lett. 123, 205501, (2019)</li>
+                    <li class="text-gray-600">O.U. Salman, G. Vitale, L. Truskinovsky, "Continuum theory of bending-to-stretching transition," Phys. Rev. E 100, 051001(R), Rapid Communication (2019)</li>
+                    <li class="text-gray-600">O.U. Salman, B. Muite, A. Finel, "Origin of stabilisation of macrotwin boundaries in martensites," The European Physical Journal B 92 (1), 20, (2019)</li>
+                    <li class="text-gray-600">C. Baruffi, A. Finel, Y. Le Bouar, B. Bacroix, O.U. Salman, "Overdamped Langevin Dynamics simulations of grain boundary motion," Materials Theory, 3,4 (2019)</li>
+                    <li class="text-gray-600">P. Franciosi, M.Spagnuolo, O.U. Salman, "Mean Green operators of deformable fiber networks embedded in a compliant matrix and property estimates," Continuum Mechanics and Thermodynamics, Volume 31, Issue 1, pp 101–132, (2019)</li>
+                    <li class="text-gray-600">A. Ask, S. Forest, B. Appolaire, K. Ammar, O.U. Salman, "A Cosserat crystal plasticity and phase field theory for grain boundary migration," Journal of the Mechanics and Physics of Solids 115, 167-194, (2018)</li>
+                    <li class="text-gray-600">P. Zhang, O.U. Salman, J.-Y. Zhang, G. Liu, J. Weiss, L. Truskinovsky and J. Sun, "Taming intermittent plasticity at small scales," Acta Mater, 128, 351-364, (2018)</li>
+                    <li class="text-gray-600">M. Jedrychowski, B. Bacroix, O.U. Salman, J. Tarasiuk, S. Wronski, "Investigation of SIBM driven recrystallization in alpha Zirconium based on EBSD data and Monte Carlo modeling," Materials Science and Engineering 89, 012029, (2016)</li>
+                    <li class="text-gray-600">A. Taloni, O.U. Salman, S. Zapperi, "Volume Changes During Active Shape Fluctuations in Cells," Phys. Rev. Lett. 114, 208101, (2015) - (Highlighted in Nature Physics and APS Physics Journals)</li>
+                    <li class="text-gray-600">O. Schylgo, O.U. Salman, A. Finel, "Martensitic phase transformations in Ni-Ti base shape memory alloys: Landau Theory," Acta Materialia 60, 6784-6792, (2012)</li>
+                    <li class="text-gray-600">O.U. Salman, A. Finel, R. Delville, D. Schryvers, "The role of phase compatibility in martensite," J.Appl.Phys.111,103517, (2012)</li>
+                    <li class="text-gray-600">O.U. Salman, L. Truskinovsky, "On the critical nature of the plastic flow: one and two dimensional models," International Journal of Engineering Science, 59:219.254, (2012)</li>
+                    <li class="text-gray-600">O.U. Salman, L. Truskinovsky, "Minimal discrete automaton behind crystal plasticity," Phys. Rev. Lett. 106, 175503, (2011)</li>
+                    <li class="text-gray-600">A. Finel, O.U. Salman, "Phase Field Methods: microstructures, mechanical properties and complexity," Comptes Rendus Physique, Vol. 11, Issues 3-4, p. 245-256, (2010)</li>
+                    <li class="text-gray-600">O.U. Salman, "Criticality in martensite," Mathematisches Forschungsinstitut Oberwolfach, DOI: 10.4171/OWR/2009/57 (2009)</li>
+                    <li class="text-gray-600">R. Delville R. D. James, O.U. Salman, A. Finel and D. Schryvers, "Transmission electron microscopy study of low-hysteresis shape memory alloys," DOI:10.1051/esomat/200902005, ESOMAT 2009, 02005 (2009)</li>
+                    <li class="text-gray-600">B. Muite, O.U. Salman, "Computations of geometrically linear and nonlinear Ginzburg-Landau models for martensitic pattern formation," in ESOMAT 2009 edited by E. Sciences, P. Sittner, V. Paidar, L. Heller, H. Seiner, 587 p. 03008, (2009)</li>
+                    <li class="text-gray-600">S. Ugur, O.U. Salman, G. Tepehan, F. Tepehan, O. Pekcan, "Fluorescence study on $Al_2O_3$ polystyrene latex composite film formation," Polymer composites 26 (3), 352-360, (2005)</li>
+                </ul>
+            </section>
+        </div>
+
+
+        <div id="content-conferences" role="tabpanel" aria-labelledby="tab-conferences" class="tab-content hidden">
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Conférences</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-700">Organisation scientifique</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
+                            <li>Organisation de deux mini-symposiums à la conférence internationale COMPLAS 2025 (Computational Plasticity, Fundamentals and Applications).</li>
+                            <li>Organisation et intervention lors du 11ᵉ Symposium France–US “Mechanics and Physics of Solids” (Paris, 2018).</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-700">Conférences invitées (sélection)</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 mt-2">
+                            <li>2xMePhy-IDE days: Plasticity of amorphous and crystalline materials (Paris, FRANCE, 2024).</li>
+                            <li>"Multiscale Modeling of Materials" Conference (Montpellier, FRANCE, 2023).</li>
+                            <li>"Materials Theory" Workshop (Vienna, AUSTRIA, 2023).</li>
+                            <li>Journées d’étude « Transition de phase et plasticité » (Porquerolles, FRANCE, 2023).</li>
+                            <li>MePhy-Ide days: Instabilities in disordered systems (Paris, FRANCE, 2022).</li>
+                            <li>Workshop on “Statistical Physics of Disordered Systems” (Les Houches, FRANCE, 2021).</li>
+                            <li>Journées d’étude "Mécanique du Solide" (Paris, FRANCE, 2021).</li>
+                            <li>International Congress of Theoretical and Applied Mechanics (ICTAM) (Milan, ITALIE, 2020).</li>
+                            <li>European Mechanics Society Conference (EUROMECH) (Prague, RÉPUBLIQUE TCHÈQUE, 2019).</li>
+                            <li>Workshop on “Disordered Systems” (Vienna, AUSTRIA, 2018).</li>
+                            <li>"Mechanics of Materials" Conference (Boston, USA, 2018).</li>
+                            <li>International Conference on Computational Plasticity (COMPLAS) (Barcelona, SPAIN, 2017).</li>
+                            <li>"Phase Transformations" Workshop (Zurich, SWITZERLAND, 2017).</li>
+                            <li>Workshop on “Multiscale Modeling” (Lund, SWEDEN, 2016).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+<div id="content-software" role="tabpanel" aria-labelledby="tab-software" class="tab-content hidden">
+    <section class="mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Software & Tools</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-blue-500">
+                <div class="flex items-start space-x-4">
+                    <div class="text-4xl">📄</div> 
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-lg text-gray-800">NanoPDF for macOS</h3>
+                        <p class="text-gray-600 text-sm mt-2 mb-4">
+                            A native macOS application to securely compress your PDF files. 
+                            Powered by Ghostscript, NanoPDF offers professional compression while ensuring 
+                            your data stays on your machine (100% offline processing).
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2">
+                            <a href="https://ko-fi.com/s/bd1e3fd34d" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-[#29abe0] text-white rounded-lg hover:bg-[#1a8bb8] transition-colors text-sm font-bold">
+                                <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Download on Ko-fi
+                            </a>
+                            <a href="https://cnrs-oguzumut.github.io/NanoPDF_APP/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors text-sm font-bold">
+                                Learn More →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-purple-500">
+                <div class="flex items-start space-x-4">
+                    <div class="text-4xl">📊</div> 
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-lg text-gray-800">LaTeX & BibTeX Tools for macOS</h3>
+                        <p class="text-gray-600 text-sm mt-2 mb-4">
+                            Automate tedious journal submission tasks. Batch-rename figures to match their order in your manuscript (Fig1, Fig2...) and format BibTeX references with abbreviated author and journal names. 100% offline.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2">
+                            <a href="https://ko-fi.com/s/3ccc0c085c" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors text-sm font-bold">
+                                <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Download on Ko-fi
+                            </a>
+                            <a href="https://cnrs-oguzumut.github.io/latex-bibtex-tools_APP/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors text-sm font-bold">
+                                Learn More →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>        <div id="content-documents" role="tabpanel" aria-labelledby="tab-documents" class="tab-content hidden">
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Documents à Télécharger</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-start space-x-4">
+                            <svg class="w-12 h-12 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-lg text-gray-800 mb-2">Curriculum Vitae</h3>
+                                <p class="text-gray-600 text-sm mb-3">CV complet avec liste des publications et activités de recherche</p>
+                                <div class="flex flex-col space-y-2">
+                                    <a href="./CV_claud_v3.pdf" download="CV_Salman_FR.pdf" class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors text-sm">
+                                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                        </svg>
+                                        PDF (Français)
+                                    </a>
+                                    <a href="./CV_claud_v3.pdf" download="CV_Salman_EN.pdf" class="inline-flex items-center px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors text-sm">
+                                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                        </svg>
+                                        PDF (English)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-start space-x-4">
+                            <svg class="w-12 h-12 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-lg text-gray-800 mb-2">Manuscrit HDR</h3>
+                                <p class="text-gray-600 text-sm mb-3">Habilitation à Diriger des Recherches - Manuscrit complet</p>
+                                <a href="./Manuscipt.pdf" download class="inline-flex items-center px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                    Télécharger PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-start space-x-4">
+                            <svg class="w-12 h-12 text-purple-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-lg text-gray-800 mb-2">Projet de Recherche</h3>
+                                <p class="text-gray-600 text-sm mb-3">Présentation des axes de recherche actuels et futurs</p>
+                                <a href="./Research_Statement_Salman.pdf" download class="inline-flex items-center px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                    Télécharger PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-start space-x-4">
+                            <svg class="w-12 h-12 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            </svg>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-lg text-gray-800 mb-2">Liste Complète des Publications</h3>
+                                <p class="text-gray-600 text-sm mb-3">Liste exhaustive avec liens DOI et métriques</p>
+                                <a href="./Publications_Complete_List.pdf" download class="inline-flex items-center px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                    Télécharger PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="text-sm text-gray-700">
+                        <strong>Note:</strong> Tous les documents sont au format PDF. Pour toute demande de document supplémentaire ou dans un format différent, n'hésitez pas à me contacter par email.
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div id="content-interactive" role="tabpanel" aria-labelledby="tab-interactive" class="tab-content hidden">
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-4">Interactive Visualisations</h2>
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <p class="text-gray-700 mb-4 text-center">
+                        Visualisation interactive du paysage d'énergie sur un réseau carré.
+                    </p>
+                    <div class="flex justify-center">
+                        <iframe src="./3d_square_interactive.html" style="width:100%; height:500px; border:none;"></iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            function showTab(selectedId) {
+                // Hide all content sections
+                tabContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+
+                // Loop through all buttons and reset their styles
+                tabButtons.forEach(button => {
+                    button.classList.remove('bg-blue-500', 'text-white');
+                    button.classList.add('bg-gray-200', 'text-gray-800');
+                    button.setAttribute('aria-selected', 'false');
+                });
+
+                // Show the selected content and update the button style
+                const selectedContent = document.getElementById(`content-${selectedId.split('-')[1]}`);
+                const selectedButton = document.getElementById(selectedId);
+                
+                if (selectedContent) {
+                    selectedContent.classList.remove('hidden');
+                }
+                
+                if (selectedButton) {
+                    selectedButton.classList.remove('bg-gray-200', 'text-gray-800');
+                    selectedButton.classList.add('bg-blue-500', 'text-white');
+                    selectedButton.setAttribute('aria-selected', 'true');
+                }
+            }
+
+            // Add event listeners to each button
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    showTab(button.id);
+                });
+            });
+
+            // Show the default tab (Research) on page load
+            showTab('tab-research');
+        });
+    </script>
+</body>
+</html>
