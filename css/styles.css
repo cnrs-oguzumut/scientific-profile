@@ -98,59 +98,6 @@ body.dark-mode .sticky-nav-wrapper {
     }
 }
 
-/* Visitor Counter */
-.visitor-counter {
-    position: fixed;
-    bottom: 2rem;
-    left: 2rem;
-    background: rgba(255, 255, 255, 0.95);
-    color: #1f2937;
-    padding: 0.75rem 1.25rem;
-    border-radius: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-size: 0.875rem;
-    font-weight: 600;
-    backdrop-filter: blur(8px);
-    z-index: 100;
-    transition: all 0.3s ease;
-}
-
-.visitor-counter:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-body.dark-mode .visitor-counter {
-    background: rgba(31, 41, 55, 0.95);
-    color: #f3f4f6;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.visitor-icon {
-    width: 1.25rem;
-    height: 1.25rem;
-    flex-shrink: 0;
-}
-
-#visitorCount {
-    color: #3b82f6;
-    font-size: 1rem;
-    font-weight: 700;
-    min-width: 1.5rem;
-    text-align: center;
-}
-
-body.dark-mode #visitorCount {
-    color: #60a5fa;
-}
-
-.visitor-text {
-    white-space: nowrap;
-}
-
 /* Back to top button */
 .back-to-top {
     position: fixed;
@@ -237,23 +184,6 @@ img {
         padding: 0.625rem 0.875rem;
         margin: 0.25rem;
         min-height: 44px; /* iOS recommended minimum */
-    }
-
-    /* Mobile-friendly visitor counter */
-    .visitor-counter {
-        bottom: 1rem;
-        left: 1rem;
-        font-size: 0.75rem;
-        padding: 0.5rem 0.875rem;
-    }
-
-    .visitor-icon {
-        width: 1rem;
-        height: 1rem;
-    }
-
-    #visitorCount {
-        font-size: 0.875rem;
     }
 
     /* Mobile-friendly back to top button */
@@ -347,23 +277,6 @@ img {
 
     h2 {
         font-size: 1.25rem !important;
-    }
-
-    /* Smaller visitor counter */
-    .visitor-counter {
-        font-size: 0.7rem;
-        padding: 0.375rem 0.75rem;
-        bottom: 0.75rem;
-        left: 0.75rem;
-    }
-
-    .visitor-icon {
-        width: 0.875rem;
-        height: 0.875rem;
-    }
-
-    #visitorCount {
-        font-size: 0.8rem;
     }
 
     /* Smaller back to top button */
