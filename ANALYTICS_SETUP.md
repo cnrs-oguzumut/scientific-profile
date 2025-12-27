@@ -1,88 +1,55 @@
-# Google Analytics Setup Instructions
+# GoatCounter Analytics Setup
 
-Your website is now ready for Google Analytics tracking. Follow these steps to activate it:
+Your website is now configured with GoatCounter - a simple, privacy-friendly analytics solution.
 
-## Step 1: Create a Google Analytics Account
+## ✅ Already Configured!
 
-1. Go to [Google Analytics](https://analytics.google.com/)
-2. Sign in with your Google account
-3. Click "Start measuring" or "Admin" → "Create Account"
+The tracking code has been added to your website. Once you complete the signup, your analytics will start working automatically!
 
-## Step 2: Set Up a Property
+## Your Configuration
 
-1. Enter an **Account name** (e.g., "CNRS Research Profile")
-2. Configure data sharing settings (optional)
-3. Click "Next"
-4. Enter a **Property name** (e.g., "Scientific Profile Website")
-5. Select your **timezone** and **currency**
-6. Click "Next"
+- **GoatCounter URL**: https://oguzumut.goatcounter.com/count
+- **Email**: umutsalman@gmail.com
+- **Code**: oguzumut
 
-## Step 3: Configure Data Stream
+## How to Access Your Analytics
 
-1. Select **Web** as the platform
-2. Enter your website URL: `https://cnrs-oguzumut.github.io/scientific-profile/`
-3. Enter a **Stream name**: "Main Website"
-4. Click "Create stream"
+1. Go to: https://oguzumut.goatcounter.com
+2. Log in with your email and password
+3. You'll see your visitor statistics in real-time!
 
-## Step 4: Get Your Measurement ID
+## What You Get (100% Free Forever)
 
-After creating the stream, you'll see a **Measurement ID** that looks like:
-```
-G-XXXXXXXXXX
-```
+✅ **Visitor counts** - Daily, weekly, monthly stats
+✅ **Page views** - Which pages get the most traffic
+✅ **Referrers** - Where visitors come from
+✅ **Browser/OS info** - What devices people use
+✅ **Country data** - Geographic distribution
+✅ **Real-time tracking** - Live visitor feed
+✅ **No cookies required** - Privacy-friendly
+✅ **GDPR compliant** - No consent banner needed
+✅ **Lightweight** - Won't slow down your site
 
-Copy this ID.
+## Testing
 
-## Step 5: Update Your Website
+After the site deploys (1-2 minutes), you can test it:
 
-1. Open `index.html` in your project
-2. Find these two lines (around line 11 and 16):
-   ```html
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-   ```
-   and
-   ```javascript
-   gtag('config', 'G-XXXXXXXXXX');
-   ```
+1. Visit your website: https://cnrs-oguzumut.github.io/scientific-profile/
+2. Open your GoatCounter dashboard: https://oguzumut.goatcounter.com
+3. You should see your visit appear within ~10 seconds!
 
-3. Replace **both** instances of `G-XXXXXXXXXX` with your actual Measurement ID
+## Benefits Over Google Analytics
 
-## Step 6: Commit and Push
-
-```bash
-git add index.html
-git commit -m "Add Google Analytics tracking ID"
-git push
-```
-
-## Step 7: Verify It's Working
-
-1. Wait 1-2 minutes for GitHub Pages to rebuild
-2. Visit your website: https://cnrs-oguzumut.github.io/scientific-profile/
-3. Go back to Google Analytics
-4. Click "Realtime" in the left sidebar
-5. You should see yourself as an active user!
-
-## What You'll Get
-
-With Google Analytics, you can track:
-- **Visitor count** - Total and unique visitors
-- **Page views** - Which pages are most popular
-- **Geographic data** - Where your visitors are from
-- **Traffic sources** - How people find your site
-- **Device info** - Desktop vs mobile usage
-- **Real-time data** - See who's on your site right now
-
-## Privacy Note
-
-Google Analytics is GDPR-compliant when configured properly. If you're concerned about privacy, consider these alternatives:
-- **Plausible Analytics** - Privacy-focused, simple ($9/month after trial)
-- **GoatCounter** - Free, open-source, privacy-friendly
-- **Fathom Analytics** - Privacy-first ($14/month)
+- 🔒 **Privacy-friendly** - Doesn't track personal data
+- 🚀 **Lightweight** - Much faster (1.5KB vs 45KB+)
+- 🎯 **Simple** - Just the metrics you need
+- 💰 **Free** - No limits, no paid tiers
+- 🌍 **Open-source** - Transparent code
+- 📊 **Clean interface** - Easy to understand
 
 ## Need Help?
 
-If you need assistance setting this up, let me know and I can help you through the process!
+GoatCounter documentation: https://www.goatcounter.com/help
 
 ---
 
