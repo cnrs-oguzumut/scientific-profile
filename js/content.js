@@ -120,13 +120,13 @@ const profileData = {
 
     software: [
         {
-            title: "NanoPDF for macOS",
+            title: "GhostPDF for macOS",
             icon: "📄",
-            description: "A native macOS application to securely compress your PDF files. Powered by Ghostscript, NanoPDF offers professional compression while ensuring your data stays on your machine (100% offline processing).",
+            description: "A native macOS application to securely compress your PDF files. Powered by Ghostscript, GhostPDF offers professional compression while ensuring your data stays on your machine (100% offline processing).",
             borderColor: "border-blue-500",
             links: [
                 { label: "Download on Ko-fi", url: "https://ko-fi.com/s/bd1e3fd34d", color: "bg-purple-500 hover:bg-purple-600 text-white" },
-                { label: "Learn More →", url: "https://cnrs-oguzumut.github.io/NanoPDF_APP/", color: "bg-gray-200 hover:bg-gray-300 text-gray-800" }
+                { label: "Learn More →", url: "https://cnrs-oguzumut.github.io/GhostPDF_app/", color: "bg-gray-200 hover:bg-gray-300 text-gray-800" }
             ]
         },
         {
